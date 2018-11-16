@@ -6,7 +6,7 @@ This is simply tools.
 
  - backup.sh
  Must be root.
- Making now,
+ Copy your server data and make tarball archive.
 
  - setup_remote_user.sh
  Must be root.
