@@ -5,8 +5,8 @@ echo "*           backup.sh"
 echo "*"
 echo "*            Ver 1.0"
 echo "*"
-echo "*"  2018/01/03 Created Takeshi Shibata
-echo "*"  2018/01/03 Updated Takeshi Shibata
+echo "*"  2018/01/03 Created takeshi0511
+echo "*"  2018/01/03 Updated takeshi0511
 echo "*"
 echo "************************************************************************"
 
