@@ -12,6 +12,6 @@ dnf config-manager --set-enabled docker-ce-test
 dnf config-manager --set-disabled docker-ce-edge
 dnf -y install docker-ce-`dnf list docker-ce --showduplicates | sort -r | grep docker | head -n 1 | awk '{print $2}'`
 systemctl start docker
-sysetmctl enable docker
+systemctl enable docker
 
 echo "complete."
