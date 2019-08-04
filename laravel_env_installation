@@ -1,0 +1,17 @@
+#!/bin/bash
+
+dnf -y update
+sudo dnf -y install php php-pear php-mysqlnd php-pdo php-bcmath php-zip php-openssl php-ctype php-json php-xml php-mbstring
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+sudo mv composer.phar /usr/local/bin/composer
+
+composer global require laravel/installer
+
+echo composer install complete.
+echo exec "composer create-project --prefer-dist laravel/laravel PROJECT-NAME", create a laravel project.
+exit
+
