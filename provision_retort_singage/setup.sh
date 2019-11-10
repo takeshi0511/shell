@@ -4,11 +4,13 @@ sudo yum -y install mariadb-server httpd php72-php php72-php-common php72-php-gd
 
 sudo cp -f ./config/my.cnf /etc
 sudo systemctl enable httpd mariadb
-sudo systemctl start httpd mariadb
+sudo systemctl restart httpd mariadb
+sudo localectl set-locale LANG=ja_JP.utf8
 
 echo ""
 echo "***********************************************"
 echo "initial setup complete."
-echo "You have to exec mysql_secure_installation"
+echo "You have to do below."
+echo "change httpd DocumentRoot"
+echo "mysql_secure_installation"
 echo "***********************************************"
-
